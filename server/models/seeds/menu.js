@@ -6,6 +6,10 @@ const connect = mysql.createConnection({
   database: "test",
   charset: "utf8mb4",
 });
+connect.connect((err) => {
+  if (err) console.error(err);
+  console.log("connected to the databases");
+});
 connect.query(
   "INSERT INTO menu(name_id,name ,price) VALUES(?,?,?)",
   [9, "豆皮壽司", 140],
@@ -14,3 +18,7 @@ connect.query(
     else console.log("data inserted successfully");
   }
 );
+connect.end((err) => {
+  if (err) console.error(err);
+  console.log("database connection closed");
+});
