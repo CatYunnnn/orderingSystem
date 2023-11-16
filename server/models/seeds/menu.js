@@ -1,24 +1,24 @@
 const mysql = require("mysql2");
-const connect = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "qwer1234asdf",
-  database: "test",
-  charset: "utf8mb4",
-});
-connect.connect((err) => {
+const pool = require("../../config/mysql");
+////定義schema
+
+const limitedTimeOffer = `CREATE TABLE limitedTimeOffer(id
+  INT PRIMARY KEY AUTO_INCREMENT,
+  NAME VARCHAR(10),
+  price INT,
+  type VARCHAR(10))`;
+
+////創建種子table
+pool.getConnection((err, connection) => {
   if (err) console.error(err);
   console.log("connected to the databases");
-});
-connect.query(
-  "INSERT INTO menu(name_id,name ,price) VALUES(?,?,?)",
-  [9, "豆皮壽司", 140],
-  (err, results) => {
+
+  connection.query(limitedTimeOffer, (err, results) => {
     if (err) console.error(err);
-    else console.log("data inserted successfully");
-  }
-);
-connect.end((err) => {
-  if (err) console.error(err);
-  console.log("database connection closed");
+    else console.log("table created successfully");
+  });
+
+  connection.release();
+
+  console.log("database connection released");
 });

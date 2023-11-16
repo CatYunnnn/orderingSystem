@@ -1,6 +1,7 @@
 const express = require("express");
 const mysql = require("mysql2");
 const router = express.Router();
+const pool = require("../../config/mysql");
 const testData = {
   1: "apple",
   2: "banana",
@@ -13,17 +14,10 @@ const testData = {
   9: "it",
 };
 
-const pool = mysql.createPool({
-  connectionLimit: 10,
-  host: "127.0.0.1",
-  user: "root",
-  password: "qwer1234asdf",
-  database: "test",
-});
-
 router.get("/", (req, res) => {
   res.json(testData);
 });
+////把order送到資料庫儲存
 router.post("/ordering", (req, res) => {
   const data = req.body;
 
@@ -48,4 +42,5 @@ router.post("/ordering", (req, res) => {
     console.log("database connection released");
   });
 });
+
 module.exports = router;
