@@ -1,0 +1,122 @@
+.backToHome {
+  display: block;
+  width: 17vw;
+  margin: 20px 0 20px 20px;
+  height: 5vh;
+}
+/*提醒文字*/
+.remind {
+  color: whitesmoke;
+  font-size: 25px;
+  line-height: 5vh;
+  height: 5vh;
+  margin: 0 0 20px 20px;
+}
+/*主要部分*/
+main {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+}
+/*左半邊*/
+.leftSide {
+  background-color: white;
+  width: calc(50% - 20px);
+  height: 100%;
+  margin-left: 20px;
+  border: 1px solid black;
+}
+/*商品名稱、數量、上菜*/
+.titleRow {
+  height: 3vh;
+  line-height: 3vh;
+  background-color: rgb(246, 246, 165);
+  text-align: center;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.titleName {
+  width: 70%;
+  border-right: 1px solid black;
+}
+.titleAmount {
+  width: 15%;
+  border-right: 1px solid black;
+}
+.titleFinish {
+  text-align: center;
+  width: 15%;
+}
+/*記錄區*/
+.recordRow {
+  height: 4vh;
+  line-height: 4vh;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.id {
+  text-align: center;
+  width: 10%;
+  border-right: 1px solid black;
+}
+.dishName {
+  padding-left: 5px;
+  width: 60%;
+  border-right: 1px solid black;
+}
+.amount {
+  text-align: right;
+  padding-right: 5px;
+  width: 15%;
+  border-right: 1px solid black;
+}
+.finish {
+  text-align: center;
+  width: 15%;
+}
+/*中間scrollBar*/
+.mid {
+  width: 40px;
+  height: 100%;
+}
+/*往上按鈕*/
+.scrollButtonUp {
+  line-height: 33.3vh;
+  text-align: center;
+  margin: 3vh 5px 0 5px;
+  background-color: red;
+  height: 33.3vh;
+}
+/*往下按鈕*/
+.scrollButtonDown {
+  line-height: 33.3vh;
+  text-align: center;
+  margin: 2px 5px 0 5px;
+  background-color: red;
+  height: 33.3vh;
+}
+/*右邊*/
+.rightSide {
+  width: calc(50% - 20px);
+  height: 100%;
+  margin-right: 20px;
+}
+/*其他按鈕*/
+.otherButton {
+  display: flex;
+  margin-top: 40vh;
+}
+.back,
+.check {
+  font-size: 40px;
+  font-weight: 500;
+  margin: auto;
+  display: block;
+  width: 200px;
+  height: 100px;
+  border: none;
+}
+.check {
+  width: 300px;
+  background-color: rgb(246, 246, 55);
+}

@@ -1,0 +1,76 @@
+.record {
+  margin: 0;
+  margin-left: 1.5vw;
+  width: 28vw;
+  height: 75vh;
+  position: relative;
+}
+/*點餐紀錄按鈕*/
+.recordButton {
+  width: 30%;
+  height: 5vh;
+  display: block;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+/*LINK*/
+.link {
+  text-decoration: none;
+}
+.link > button {
+  font-weight: 600;
+  font-size: 25px;
+  display: block;
+  width: 50%;
+}
+/*記錄區*/
+.recordsWrap {
+  width: 100%;
+  height: 40vh;
+  background-color: white;
+}
+/*名稱欄*/
+.titleRow {
+  color: white;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 5vh;
+  background-color: rgb(160, 2, 7);
+}
+/*名稱*/
+.title {
+  width: 20%;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 5vh;
+}
+/*細目欄*/
+.recordRow {
+  word-break: break-all;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 8.75vh;
+}
+/*細目*/
+.records {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  word-break: break-all;
+  width: 20%;
+  border: 1px solid black;
+  height: 8.75vh;
+  /* line-height: 8.75vh; */
+}
+/*點餐按鈕*/
+.orderButton {
+  position: absolute;
+  width: 30%;
+  height: 5vh;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

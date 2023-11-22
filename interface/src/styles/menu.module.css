@@ -1,0 +1,51 @@
+body{
+background-color: rgb(160,2,7);
+}
+.menu {
+  margin-top: 5vh;
+  margin-left: 1vw;
+  width: 69vw;
+  height: 70vh;
+  background-color: white;
+  border-radius:10px 10px 10px 10px;
+}
+/*餐點區*/
+.optionArea {
+  width: 100%;
+  height: 56vh;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+/*餐點選項*/
+.options {
+  line-height: 28vh;
+  width: 25%;
+  height: 28vh;
+  border: 1px solid rgb(160,2,7);
+  text-align: center;
+ 
+}
+/*頁數按鈕區*/
+.pageButton {
+  color:white;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  border-top:1px solid rgb(160,2,7);
+  background-color: rgb(55,8,0);
+  border-radius:0 0 10px 10px;
+}
+/*頁碼*/
+.pages {
+  margin: auto;
+}
+/*頁數按鈕*/
+.pageButtons {
+  display: block;
+  width: 20%;
+  height: 30%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
