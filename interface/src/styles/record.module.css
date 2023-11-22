@@ -39,12 +39,29 @@
   height: 5vh;
   background-color: rgb(160, 2, 7);
 }
-/*名稱*/
-.title {
-  width: 20%;
+/*欄位名稱*/
+.title,
+.amount,
+.changeAmount,
+.cancel {
   border: 1px solid black;
   text-align: center;
+  height: 100%;
   line-height: 5vh;
+}
+.title,
+.itemName {
+  width: 39%;
+}
+.amount,
+.itemAmount {
+  width: 10%;
+}
+.changeAmount,
+.itemAmountChange,
+.itemCancel,
+.cancel {
+  width: 17%;
 }
 /*細目欄*/
 .recordRow {
@@ -54,15 +71,27 @@
   height: 8.75vh;
 }
 /*細目*/
-.records {
+.itemName,
+.itemAmount {
+  padding-left: 5px;
+  padding-right: 5px;
   display: flex;
   align-items: center;
   overflow: hidden;
   word-break: break-all;
-  width: 20%;
   border: 1px solid black;
   height: 8.75vh;
-  /* line-height: 8.75vh; */
+}
+.itemAmountChange,
+.itemCancel {
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+  word-break: break-all;
+  border: 1px solid black;
+  height: 8.75vh;
+  text-align: center;
+  line-height: 8.75vh;
 }
 /*點餐按鈕*/
 .orderButton {

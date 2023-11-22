@@ -29,11 +29,11 @@ const Add = ({ items, cancel, order }) => {
   
   return (
     <div className={styles.recordRow}>
-      <div className={styles.records}>{items}</div>
-      <div className={styles.records}>{count}</div>
-      <div className={styles.records} onClick={subtractor}>{`<`}</div>
-      <div className={styles.records} onClick={adder}>{`>`}</div>
-      <div className={styles.records} onClick={clean}>
+      <div className={styles.itemName}>{items}</div>
+      <div className={styles.itemAmount}>{count}</div>
+      <div className={styles.itemAmountChange} onClick={subtractor}>{`<`}</div>
+      <div className={styles.itemAmountChange} onClick={adder}>{`>`}</div>
+      <div className={styles.itemCancel} onClick={clean}>
         取消
       </div>
     </div>

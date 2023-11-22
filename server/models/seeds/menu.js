@@ -11,7 +11,7 @@ const typeTable = function (type) {
 
 const orderTable = function (type) {
   return `CREATE TABLE ${type}(id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(20) CHARACTER SET utf8mb4,
-  amount INT,price INT)`;
+  amount INT)`;
 };
 ////種子插入格式
 const insert = function (type, name, price) {

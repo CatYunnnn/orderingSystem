@@ -44,7 +44,7 @@ const Record = ({ data, dataReset }) => {
   const ordering = () => {
     if (Object.keys(order).length !== 0) {
       axios
-        .post("http://localhost:5000/database/ordering", order)
+        .post("http://localhost:5000/page/ordering", order)
         .then((res) => {
           console.log("Data sent successfully:", res.data);
         })
@@ -69,10 +69,10 @@ const Record = ({ data, dataReset }) => {
       <div className={styles.recordsWrap}>
         <div className={styles.titleRow}>
           <div className={styles.title}>商品名稱</div>
-          <div className={styles.title}>數量</div>
-          <div className={styles.title}>增</div>
-          <div className={styles.title}>減</div>
-          <div className={styles.title}>取消</div>
+          <div className={styles.amount}>數量</div>
+          <div className={styles.changeAmount}>增</div>
+          <div className={styles.changeAmount}>減</div>
+          <div className={styles.cancel}>取消</div>
         </div>
         {dataList.map((items) => {
           return <Add items={items} cancel={cancel} order={order} />;
@@ -80,11 +80,11 @@ const Record = ({ data, dataReset }) => {
         {fillRecord.map(() => {
           return (
             <div className={styles.recordRow}>
-              <div className={styles.records}></div>
-              <div className={styles.records}></div>
-              <div className={styles.records}></div>
-              <div className={styles.records}></div>
-              <div className={styles.records}></div>
+              <div className={styles.itemName}></div>
+              <div className={styles.itemAmount}></div>
+              <div className={styles.itemAmountChange}></div>
+              <div className={styles.itemAmountChange}></div>
+              <div className={styles.itemCancel}></div>
             </div>
           );
         })}

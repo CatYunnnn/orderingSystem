@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/list.module.css";
+import styles from "../styles/ordered.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 ////點餐明細
@@ -7,10 +7,12 @@ const Ordered = () => {
   const [data, setData] = useState();
 
   useEffect(() => {
+    
     axios
-      .get(`http://localhost:5000/ordered`)
+      .get(`http://localhost:5000/page/ordered`)
       .then((res) => {
         setData(res.data);
+        console.log(res.data);
       })
       .catch((error) => {
         console.error("Error:", error);

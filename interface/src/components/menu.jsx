@@ -9,6 +9,7 @@ const Menu = ({ onDataClick, params }) => {
 
   ////連接後端api
   useEffect(() => {
+ 
     axios
       .get(`http://localhost:5000/page/pages/${params}`)
       .then((res) => {

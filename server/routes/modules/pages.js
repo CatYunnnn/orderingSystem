@@ -11,13 +11,13 @@ const pool = require("../../config/mysql");
       resolve(connection);
     });
   });
- 
+
   ////插入點餐資料
   const insertOrder = (conn, key, value) => {
     return new Promise((resolve, reject) => {
       conn.query(
-        "INSERT INTO `ordered`(name ,price,type) VALUES(?,?,?)",
-        [`${key}`, `${value}`,'test'],
+        "INSERT INTO `ordered`(name ,amount) VALUES(?,?)",
+        [`${key}`, value],
         (err, results) => {
           if (err) console.error(err);
           else console.log("data inserted successfully at dataBase.js");
@@ -48,8 +48,16 @@ const pool = require("../../config/mysql");
     }
   });
 
+  ////拿ordered裡面的資料
+  router.get("/ordered", (req, res) => {
+    connection.query(`SELECT * FROM ordered`, (err, results) => {
+      if (err) console.error(err);
+      else {
+        connection.release();
+        res.json(results);
+      }
+    });
+  });
 })();
 
 module.exports = router;
-
- 
