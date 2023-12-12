@@ -15,11 +15,14 @@ background-color: rgb(160,2,7);
   height: 56vh;
   display: flex;
   flex-wrap: wrap;
-
 }
 /*餐點選項*/
 .options {
-  line-height: 28vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  word-break: break-all;
   width: 25%;
   height: 28vh;
   border: 1px solid rgb(160,2,7);
