@@ -25,9 +25,10 @@ background-color: rgb(160,2,7);
   word-break: break-all;
   width: 25%;
   height: 28vh;
-  border: 1px solid rgb(160,2,7);
+  border-width: 0 2px 2px 0;
+  border-style:solid ;
+  border-color: rgb(160,2,7);
   text-align: center;
- 
 }
 /*頁數按鈕區*/
 .pageButton {

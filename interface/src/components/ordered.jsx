@@ -3,7 +3,7 @@ import styles from "../styles/ordered.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+  
 ////點餐明細
 const Ordered = () => {
   const [data, setData] = useState({});

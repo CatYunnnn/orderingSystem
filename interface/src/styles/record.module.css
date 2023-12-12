@@ -1,3 +1,77 @@
+/*彈窗*/
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(160, 2, 7);
+  padding-top: 5vh;
+}
+.text {
+  width: 90%;
+  height: 30vh;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-weight: 600;
+}
+.list {
+  width: 40%;
+  height: 40vh;
+  border-width: 1px 1px 0px 1px;
+  border-style:solid;
+  border-color: black;
+  background-color: white;
+  margin-top: 10vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+.listNameTitle {
+  height: 4vh;
+  width:80%;
+  border-right: 1px solid black;
+}
+.listAmountTitle {
+  height: 4vh;
+  width:20%;
+}
+.listRow {
+  height: 4vh;
+  line-height: 4vh;
+  background-color: rgb(246, 246, 165);
+  text-align: center;
+  display: flex;
+  border-bottom: 1px solid black;
+}
+.listName {
+  display: flex;
+  align-items: center;
+  height: 9vh;
+  width: 80%;
+  border-right: 1px solid black;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+}
+.listAmount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9vh;
+  width: 20%;
+  border-bottom: 1px solid black;
+}
+.itemWrap {
+  display: flex;
+}
+.fill {
+  display: flex;
+}
+/*點餐紀錄區*/
 .record {
   margin: 0;
   margin-left: 1.5vw;
@@ -29,6 +103,9 @@
   width: 100%;
   height: 40vh;
   background-color: white;
+  border-width:1px 0 0 1px;
+  border-style: solid;
+  border-color:black;
 }
 /*名稱欄*/
 .titleRow {
@@ -44,7 +121,10 @@
 .amount,
 .changeAmount,
 .cancel {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: black;
   text-align: center;
   height: 100%;
   line-height: 5vh;
@@ -79,7 +159,9 @@
   align-items: center;
   overflow: hidden;
   word-break: break-all;
-  border: 1px solid black;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: black;
   height: 8.75vh;
 }
 .itemAmountChange,
@@ -88,7 +170,9 @@
   padding-right: 5px;
   overflow: hidden;
   word-break: break-all;
-  border: 1px solid black;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: black;
   height: 8.75vh;
   text-align: center;
   line-height: 8.75vh;
