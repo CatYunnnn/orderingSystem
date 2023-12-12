@@ -3,7 +3,7 @@ import styles from "../styles/ordered.module.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-  
+
 ////點餐明細
 const Ordered = () => {
   const [data, setData] = useState({});
@@ -56,7 +56,9 @@ const Ordered = () => {
             如有餐點尚未到齊，請告知您附近的服務人員
           </p>
           <div className={styles.otherButton}>
-            <button className={styles.back}>返回</button>
+            <Link className={styles.link} to="/pages/limitedtimeoffer">
+              <button className={styles.back}>返回</button>
+            </Link>
             <button className={styles.check}>服務鈴/結帳</button>
           </div>
         </div>

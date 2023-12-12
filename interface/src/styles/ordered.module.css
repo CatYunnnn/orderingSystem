@@ -29,7 +29,8 @@ main {
   height: 100%;
   margin-left: 20px;
   border: 1px solid black;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 /*商品名稱、數量、上菜*/
 .titleRow {
