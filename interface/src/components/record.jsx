@@ -19,8 +19,10 @@ const Record = ({ data, dataReset }) => {
   ////建立填充的格子
   let fill = 4 - dataList.length;
   if (fill < 0) fill = 0;
-  const fillRecord = Array(fill).fill(0); ////要先把裡面設值 不然無法用map
-  console.log(fillRecord)
+
+  ////要先把裡面設值 不然無法用map
+  const fillRecord = Array(fill).fill(0);
+
   ////刪除
   const cancel = (item) => {
     const newArray = dataList.filter((i) => i !== item);
@@ -46,7 +48,6 @@ const Record = ({ data, dataReset }) => {
   useEffect(() => {
     setListArray(Object.keys(list));
     setFillList(Array(4 - Object.keys(list).length).fill(0));
-    console.log(list);
   }, [list]);
 
   const ordering = () => {

@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./components/home";
 import Page from "./components/page";
 import Ordered from "./components/ordered";
+import Checkout from "./components/checkout";
 import { Routes, Route } from "react-router-dom";
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />} />{" "}
         <Route path="ordered" element={<Ordered />} />
         <Route path="pages/:pageId" element={<Page />} />
+        <Route path="checkout" element={<Checkout />} />
       </Routes>
     </>
   );
